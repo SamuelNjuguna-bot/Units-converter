@@ -5,10 +5,13 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Units App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="header">
@@ -17,40 +20,26 @@
           <h1 class="tittle">CONVERT fROM ANY UNIT TO ALL UNITS</h1>
         </div>
         <div class="input-container">
-          <div class="input-value"><input type="text" class="value" /></div>
-          <div class="base-unit">
-            --Base Unit --
-            <span class="dropdown-menu">
-              <select>
-                <option value="Millimeters">Millimeters</option>
-                <option value="Centimeters">Centimeters</option>
-                <option value="Decimeters">Decimeters</option>
-                <option value="Meters">Meters</option>
-                <option value="DeKameters">DeKameters</option>
-                <option value="Hectometers">Hectometers</option>
-                <option value="Kilometers">Kilometers</option>
-              </select>
-            </span>
-          </div>
-          <div class="convert-btn">
-            <button class="btn">Convert</button>
-          </div>
+          <form action="">
+            <input type="text" id="unitValue" />
+            <select id="selected">
+              <option value="--Base-Unit--">--Base-Unit--</option>
+              <option value="Millimeters">Millimeters</option>
+              <option value="Centimeters">Centimeters</option>
+              <option value="Decimeters">Decimeters</option>
+              <option value="Meters">Meters</option>
+              <option value="DeKameters">DeKameters</option>
+              <option value="Hectometers">Hectometers</option>
+              <option value="Kilometers">Kilometers</option>
+            </select>
+            <input type="submit" id="submit" value="Convert" />
+          </form>
         </div>
-        <div class="warning">
-          <p class="warning-text">please Input a Value</p>
-        </div>
+        
       </div>
     </section>
     <section class="footer">
-      <div class="output">
-        <p class="mm">mm</p>
-        <p class="cm">cm</p>
-        <p class="dm">dm</p>
-        <p class="m">m</p>
-        <p class="Dm">Dm</p>
-        <p class="Hm">Hm</p>
-        <p class="km">km</p>
-      </div>
+      <div class="output" id="output"></div>
     </section>
     <script src="app.js"></script>
   </body>
