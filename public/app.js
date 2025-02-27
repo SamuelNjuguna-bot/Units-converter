@@ -29,14 +29,14 @@ const example = addEventListener("submit", (e)=>{
             var Km =value / 1000000;
         }
         else if(selected === "Centimeters"){
-            var mm = value* 10;
             var abrv = "cm";
+            var mm = value* 10;
             var cm = value * 1;
             var dm =value / 10;
             var m = value/ 100;
             var Dm =value/ 1000;
             var Hm =value / 10000;
-            lvarKm =value / 100000;
+            var Km =value / 100000;
         }
         else if(selected === "Decimeters"){
             var abrv = "dm";
