@@ -1,10 +1,17 @@
 
 const example = addEventListener("submit", (e)=>{
     e.preventDefault();
+   
     const unit = document.getElementById("unitValue").value;
     const select = document.getElementById("selected").value;
     const displayUnits = document.getElementById("output");
     const warning = document.getElementById("warn-text");
+    const clr = document.getElementById("output");
+    clr.innerHTML="";
+    warning.innerHTML="";
+    
+
+   
     
     
     
@@ -93,7 +100,7 @@ const example = addEventListener("submit", (e)=>{
 
 
     }
-    if (select && unit !==null){
+    if(unit && select !== null){ 
         switch(select){
             case "Millimeters":func(unit, select);
                                  break;
@@ -110,13 +117,13 @@ const example = addEventListener("submit", (e)=>{
             case "Kilometers": func(unit, select);
             break;
             default:
-                console.log("Please select an option");
+                warning.textContent = "Please Select a base unit"
 
               
         }
     }
     else{
-        warning.textContent="Please input a value"
+        warning.textContent="Please input a value"; 
     }
     
 
